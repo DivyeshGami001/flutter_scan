@@ -9,7 +9,7 @@ buildscript {
     }
 
     dependencies {
-classpath 'com.android.tools.build:gradle:7.4.2'
+classpath 'com.android.tools.build:gradle:8.3.2'
     }
 }
 
@@ -29,6 +29,7 @@ android {
 
     defaultConfig {
         minSdkVersion 21
+        targetSdkVersion 36
         consumerProguardFiles 'consumer-proguard-rules.pro'
     }
     lintOptions {
