@@ -28,6 +28,7 @@ public class ScanViewFactory extends PlatformViewFactory {
         this.activityPluginBinding = activityPluginBinding;
     }
 
+    @SuppressWarnings("unchecked")
     @Override
     public PlatformView create(Context context, int viewId, Object args) {
         final Map<String, Object> creationParams = (Map<String, Object>) args;
