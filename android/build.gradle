@@ -9,7 +9,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.0.2'
+        classpath 'com.android.tools.build:gradle:7.4.2'
     }
 }
 
@@ -26,16 +26,20 @@ apply plugin: 'com.android.library'
 android {
     namespace "com.chavesgu.scan"
     
-    compileSdkVersion 35
+    compileSdkVersion 36
 
     defaultConfig {
-        minSdkVersion 19
+        minSdkVersion 21
         consumerProguardFiles 'consumer-proguard-rules.pro'
     }
     lintOptions {
         disable 'InvalidPackage'
     }
-    buildToolsVersion '28.0.3'
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    ndkVersion '29.0.13599879 rc2'
 }
 
 dependencies {
